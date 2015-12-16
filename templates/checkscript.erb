@@ -1,0 +1,9 @@
+check program <%= @name %> with path "<%= @checkscript %>" with timeout <%= @timeout %> seconds
+<% if defined?(@service) -%>
+  start program "service <%= @service %> start"
+  stop  program "service <%= @service %> stop"
+<% else -%>
+  start program "<%= @initscript %> start"
+  stop  program "<%= @initscript %> stop"
+<% end -%>
+  if status != <%= @validreturn %> then restart

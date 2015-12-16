@@ -1,0 +1,14 @@
+{
+  "name": "eyp-monit",
+  "version": "0.1.4",
+  "author": "eyp",
+  "summary": "manages monit: check pid and check script only",
+  "license": "Apache-2.0",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs/stdlib"},
+    {"version_requirement":">= 0.1.0","name":"eyp/epel"}
+  ]
+}
