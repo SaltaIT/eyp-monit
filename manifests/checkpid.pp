@@ -9,8 +9,8 @@ define monit::checkpid (
   #TODO: directori dedicat a moduls gestionats
 
   # check process puppetd with pidfile /var/run/puppet/agent.pid
-  # 	start program "/etc/init.d/puppet start"
-  # 	stop  program "/etc/init.d/puppet stop"
+  #   start program "/etc/init.d/puppet start"
+  #   stop  program "/etc/init.d/puppet stop"
 
   if($service==undef) and ($initscript==undef)
   {
@@ -19,11 +19,11 @@ define monit::checkpid (
 
   file { "${monit::params::monitconfd}/${monitname}":
     ensure  => $ensure,
-    owner   => "root",
-    group   => "root",
-    mode    => 0644,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
     require => Package['monit'],
-    notify  => Service["monit"],
+    notify  => Service['monit'],
     content => template("${module_name}/checkpid.erb")
   }
 

@@ -17,8 +17,8 @@ class monit inherits monit::params {
   }
 
   service { 'monit':
+    ensure  => 'running',
     enable  => true,
-    ensure  => "running",
     require => Package['monit'],
   }
 
