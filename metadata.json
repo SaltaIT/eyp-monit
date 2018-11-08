@@ -4,12 +4,13 @@
   "author": "eyp",
   "summary": "manages monit: check pid and check script only",
   "license": "Apache-2.0",
-  "source": "",
-  "project_page": null,
-  "issues_url": null,
+  "source": "https://github.com/NTTCom-MS/eyp-monit",
+  "project_page": "https://github.com/NTTCom-MS/eyp-monit",
+  "issues_url": "https://github.com/NTTCom-MS/eyp-monit/issues",
   "dependencies": [
-    {"version_requirement":">= 1.0.0","name":"puppetlabs/stdlib"},
-    {"version_requirement":">= 0.1.0","name":"eyp/epel"}
+    {"name":"puppetlabs/stdlib", "version_requirement":">= 1.0.0 < 9.9.9"},
+    {"name":"eyp/eyplib", "version_requirement":">= 0.1.0 < 0.2.0"},
+    {"name":"eyp/epel", "version_requirement":">= 0.1.0 < 9.9.9"}
   ],
   "operatingsystem_support": [
     {
