@@ -1,9 +1,9 @@
 define monit::checkpid (
                           $pid,
-                          $service=undef,
-                          $initscript=undef,
-                          $monitname=$name,
-                          $ensure='present'
+                          $service    = undef,
+                          $initscript = undef,
+                          $monitname  = $name,
+                          $ensure     = 'present'
                         ) {
 
   #TODO: directori dedicat a moduls gestionats

@@ -1,4 +1,3 @@
-#
 class monit::params {
 
   case $::osfamily
@@ -7,10 +6,11 @@ class monit::params {
     {
       case $::operatingsystemrelease
       {
-        /^6.*$/:
+        /^[67].*$/:
         {
           $enableepel=true
           $monitconfd='/etc/monit.d'
+          $monitconf = '/etc/monit.conf'
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }
@@ -23,10 +23,11 @@ class monit::params {
         {
           case $::operatingsystemrelease
           {
-            /^14.*$/:
+            /^1[468].*$/:
             {
               $enableepel=false
               $monitconfd='/etc/monit/conf.d'
+              $monitconf = '/etc/monit/monitrc'
             }
             default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
           }

@@ -1,11 +1,11 @@
 define monit::checkscript (
                             $checkscript,
-                            $service=undef,
-                            $initscript=undef,
-                            $monitname=$name,
-                            $validreturn='0',
-                            $timeout='10',
-                            $ensure='present'
+                            $service     = undef,
+                            $initscript  = undef,
+                            $monitname   = $name,
+                            $validreturn = '0',
+                            $timeout     = '10',
+                            $ensure      = 'present'
                           ) {
 
   # check program myscript with path /usr/local/bin/myscript.sh
