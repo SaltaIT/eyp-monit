@@ -1,4 +1,4 @@
-root@centric1:~> cat 
+root@centric1:~> cat
 #
 # puppet managed file
 #
@@ -32,7 +32,7 @@ set logfile <%= @logfile %>
 #
 
 <% if @mailservers.any? -%>
-set mailserver <%= @mailserver.join(',') %>
+set mailserver <%= @mailservers.join(',') %>
 <% end -%>
 
 ## By default monit will drop alert events if no mail servers are available.
