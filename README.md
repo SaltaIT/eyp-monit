@@ -45,12 +45,14 @@ monit::checkscript { 'testScript':
 }
 
 monit::checkpid { 'testPID':
-  pid         => '1234',
+  pid         => '/var/run/demo.pid',
   service     => 'testPuppet',
 }
 ```
 
 ## Usage
+
+
 
 ### Monit
 No parameters allowed.
