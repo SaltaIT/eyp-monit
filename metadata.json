@@ -1,7 +1,7 @@
 {
   "name": "eyp-monit",
   "version": "0.2.0",
-  "author": "eyp",
+  "author": "Jordi Prats",
   "summary": "manages monit: check pid and check script only",
   "license": "Apache-2.0",
   "source": "https://github.com/SaltaIT/eyp-monit",
